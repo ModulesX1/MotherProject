@@ -18,8 +18,22 @@
 .nav-bottom {
     grid-template-columns: repeat( 5, 1fr );
 }
+.navbar-link {
+    position: relative;
+    transition: all 400ms;
+}
 .navbar-link svg.bi {
     fill: #303030
+}
+.navbar-link.active::before {
+    top: 0;
+    left: 50%;
+    width: 80%;
+    content: '';
+    height: 2.5px;
+    position: absolute;
+    transform: translateX(-50%);
+    background: var(--bs-primary)
 }
 .navbar-link.active svg.bi {
     fill: var(--bs-primary)
