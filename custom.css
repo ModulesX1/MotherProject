@@ -1,0 +1,13 @@
+:root {
+    --navbar-height: 50px
+}
+
+.dvh-100 {
+    height: 100dvh;
+}
+.navbar-bottom {
+    grid-template-rows: calc( 100dvh - var(--navbar-height) ) var(--navbar-height);
+}
+.nav-bottom {
+    grid-template-columns: repeat( 5, 1fr );
+}
