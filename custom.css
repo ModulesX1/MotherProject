@@ -18,3 +18,9 @@
 .nav-bottom {
     grid-template-columns: repeat( 5, 1fr );
 }
+.navbar-link svg.bi {
+    fill: #303030
+}
+.navbar-link.active svg.bi {
+    fill: var(--bs-primary)
+}
