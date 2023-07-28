@@ -25,13 +25,17 @@
 .navbar-link svg.bi {
     fill: #303030
 }
+.navbar-link::before {
+    width: 0px;
+    position: absolute
+}
 .navbar-link.active::before {
-    top: 0;
+    top: 0px;
     left: 50%;
     width: 80%;
     content: '';
     height: 2.5px;
-    position: absolute;
+    border-radius: 3px;
     transform: translateX(-50%);
     background: var(--bs-primary)
 }
