@@ -23,7 +23,9 @@
     transition: all 400ms;
 }
 .navbar-link svg.bi {
-    fill: #303030
+    width: 26px;
+    height: 26px;
+    fill: #303030;
 }
 .navbar-link::before {
     width: 0px;
