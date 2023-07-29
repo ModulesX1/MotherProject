@@ -1,5 +1,5 @@
 :root {
-    --navbar-height: 50px;
+    --navbar-height: 55px;
     --device-height: 100vh
 }
 
@@ -12,33 +12,38 @@
 .dvh-100 {
     height: var(--device-height);
 }
+.shadow-top {
+    box-shadow: rgba(50, 50, 93, 1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px 1px 4px 1px
+}
 .navbar-bottom {
     grid-template-rows: calc( var( --device-height ) - var(--navbar-height) ) var(--navbar-height);
 }
 .nav-bottom {
-    grid-template-columns: repeat( 5, 1fr );
+    padding-bottom: .25em;
+    grid-template-columns: repeat( 5, 1fr )
 }
 .navbar-link {
-    position: relative;
-    transition: all 400ms;
+    position: relative
 }
 .navbar-link svg.bi {
     width: 26px;
     height: 26px;
-    fill: #303030;
+    fill: #565656;
 }
 .navbar-link::before {
+    left: 50%;
+    top: 0.1px;
     width: 0px;
-    position: absolute
+    content: '';
+    height: 2px;
+    position: absolute;
+    transition: all 200ms;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px
 }
 .navbar-link.active::before {
-    top: 0px;
-    left: 50%;
     width: 80%;
-    content: '';
-    height: 2.5px;
-    border-radius: 3px;
-    transform: translateX(-50%);
     background: var(--bs-primary)
 }
 .navbar-link.active svg.bi {
