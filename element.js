@@ -17,15 +17,16 @@ const util = {
     },
     
     /**
-     * @param { String } tagName The HTML tag name for the element.
-     * @param { Object } options
-     * @param { String } options.className Element class name.
-     * @param { HTMLElement } options.innerChild Append this to element.
-     * @param { Object } options.addEventListener
-     * @param { String | [] } options.addEventListener.event
-     * @param { Function } options.addEventListener.handler
-     * @param { {} } options.attr
-     * @returns { HTMLElement }
+     * @param { String } tagName - The HTML tag name for the element.
+     * @param { Object } options - Object with various options for element creation.
+     * @param { String } [options.className] - Element class name.
+     * @param { HTMLElement } [options.innerChild] - Append this element as a child to the created element.
+     * @param { Object } [options.addEventListener] - Object with event listener configuration.
+     * @param { String | [] } [options.addEventListener.event] - Event type(s) to listen to. Can be a space-separated string or an array of event types.
+     * @param { Function } [options.addEventListener.handler] - Event handler function to be called when the event is triggered.
+     * @param { {} } [options.attr] - Object with attributes to set on the element.
+     * @param { String } [options.xmlns] - The XML namespace for the element, if applicable (optional).
+     * @returns { HTMLElement } - The created HTML element.
      **/
     _createNode( tagName, options ) {
         
@@ -77,17 +78,4 @@ const util = {
     }
     
 }
-
-util._createNode("div", {
-    className: "mx-0",
-    style: "height:100dvh",
-    innerChild: document.body,
-    addEventListener: {
-        event: "click",
-        handler: (e) => { console.log(e.type) }
-    },
-    attr: {
-        "ccid": 1
-    }
-})
 
